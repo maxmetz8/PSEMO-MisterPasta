@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MisterPasta.Server", "MisterPasta.Server\MisterPasta.Server.csproj", "{22214C21-90E8-490B-9B63-6B562CF09A74}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "misterpasta.client", "misterpasta.client\misterpasta.client.esproj", "{4A8BC202-9ECC-47CD-9573-CFDC7494A035}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22214C21-90E8-490B-9B63-6B562CF09A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22214C21-90E8-490B-9B63-6B562CF09A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22214C21-90E8-490B-9B63-6B562CF09A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22214C21-90E8-490B-9B63-6B562CF09A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8BC202-9ECC-47CD-9573-CFDC7494A035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8BC202-9ECC-47CD-9573-CFDC7494A035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8BC202-9ECC-47CD-9573-CFDC7494A035}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4A8BC202-9ECC-47CD-9573-CFDC7494A035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8BC202-9ECC-47CD-9573-CFDC7494A035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8BC202-9ECC-47CD-9573-CFDC7494A035}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40E30332-C25A-404D-B76F-295C9AF04468}
+	EndGlobalSection
+EndGlobal
