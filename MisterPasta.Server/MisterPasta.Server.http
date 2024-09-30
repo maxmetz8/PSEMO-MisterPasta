@@ -1,0 +1,6 @@
+@MisterPasta.Server_HostAddress = http://localhost:5186
+
+GET {{MisterPasta.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

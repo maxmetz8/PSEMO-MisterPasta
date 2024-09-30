@@ -1,0 +1,32 @@
+# Visual Studio folder
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output folders
+bin/
+obj/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# User-specific files
+*.rsuser
+*.pdb
+*.cache
+*.log
+*.swp
+*.bak
+
+# ASP.NET specific files
+appsettings*.json
+
+# Angular specific (in geval van Angular frontend)
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
