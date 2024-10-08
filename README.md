@@ -16,3 +16,9 @@ Psemo project met agile scrum methodiek
 3. Indien er **geheugenlekken** of andere ernstige performanceproblemen zijn vastgesteld, moeten deze voordat er een pull request gemakt wordt, opgelost worden.
 4. Voor elke functionaliteit in de front-end is een functionele test (door middel van Cypress) gemaakt die een geslaagde status heeft.
    
+## Coolify
+1. port fowarding van 3389 naar 8000 waar de coolify server draait
+2. server heeft internet verbinding via firewall ip adres
+3. coolify is geconfigureerd met angular
+4. coolify is geconfigureerd met C#
+5. coolify is geconfigureerd met MariaDB
