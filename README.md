@@ -6,9 +6,10 @@ Psemo project met agile scrum methodiek
 ### Algemeen
 1. Alle geaccepteerde **vereisten** en **acceptatiecriteria** zijn volledig geïmplementeerd.
 2. Code is **gecommit** en **gepusht** naar de juiste branch in de versiebeheertool (Github).
-3. Er is een **code review** door middel van een pull request uitgevoerd door het teamlid en goedgekeurd.
-4. Er is een **handmatige test** uitgevoerd door het teamlid die aantoont dat de feature of user story correct werkt volgens de specificaties.
-5. **Geen bekende kritieke bugs** of blockers die de functionaliteit belemmeren.
+3. Bestanden die gegenereerd worden door nuGet packages worden genegeerd met .gitignore
+4. Er is een **code review** door middel van een pull request uitgevoerd door het teamlid en goedgekeurd.
+5. Er is een **handmatige test** uitgevoerd door het teamlid die aantoont dat de feature of user story correct werkt volgens de specificaties.
+6. **Geen bekende kritieke bugs** of blockers die de functionaliteit belemmeren.
 
 ### Kwaliteitseisen**
 1. **Code is gedocumenteerd** in een manier dat voor het ander teamlid en externe personen leesbaar is.
