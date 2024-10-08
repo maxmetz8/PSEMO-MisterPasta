@@ -20,11 +20,11 @@ Psemo project met agile scrum methodiek
 ## Git afspraken
 1. Benaming van branches
 * Featurebranch: 
-feature/<korte-beschrijving-van-de-ticker>
+feature/korte-beschrijving-van-de-ticker
 bijvoorbeeld: feature/add-header
 
 * Bugfixbranch:
-bugfix/<bug-naam>
+bugfix/bug-naam
 bijvoorbeeld: bugfix/error-message-not-shown
 2. Niet direct naar main pushen, eerst naar dev --> laten testen door ander teamlid en daarna pull request maken.
    
