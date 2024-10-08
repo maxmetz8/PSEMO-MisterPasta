@@ -16,6 +16,17 @@ Psemo project met agile scrum methodiek
 2. De code voldoet aan de gestelde **coding standards** (de code standaarden die in de Angular documentatie (front-end) en ASP.net Core documentatie (back-end) staan zullen worden aangehouden).
 3. Indien er **geheugenlekken** of andere ernstige performanceproblemen zijn vastgesteld, moeten deze voordat er een pull request gemakt wordt, opgelost worden.
 4. Voor elke functionaliteit in de front-end is een functionele test (door middel van Cypress) gemaakt die een geslaagde status heeft.
+
+## Git afspraken
+1. Benaming van branches
+* Featurebranch: 
+feature/<korte-beschrijving-van-de-ticker>
+bijvoorbeeld: feature/add-header
+
+* Bugfixbranch:
+bugfix/<bug-naam>
+bijvoorbeeld: bugfix/error-message-not-shown
+2. Niet direct naar main pushen, eerst naar dev --> laten testen door ander teamlid en daarna pull request maken.
    
 ## Coolify
 1. port fowarding van 3389 naar 8000 waar de coolify server draait
