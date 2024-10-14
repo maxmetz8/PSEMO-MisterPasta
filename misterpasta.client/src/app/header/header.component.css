@@ -1,3 +1,9 @@
+* {
+  font-family: "Playwrite IS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
 
 .header {
   background-color: var(--red);
