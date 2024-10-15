@@ -16,6 +16,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin());
 }
 
 app.UseHttpsRedirection();
@@ -27,3 +28,5 @@ app.MapControllers();
 app.MapFallbackToFile("/index.html");
 
 app.Run();
+
+//
