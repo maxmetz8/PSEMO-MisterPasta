@@ -1,1 +1,19 @@
-<p>order works!</p>
+<app-header></app-header>
+<div class="order">
+  <div class="order__introduction">
+    <h1>Kies hier uw pakket</h1>
+      <p>Minimaal 10 maaltijden</p>
+  </div>
+  <div class="order__options">
+    <div class="order__option">
+      <app-order-option [amount]="10" [information]="'Het minimaal aantal wordt 10 pakketten.'" [delivery]="'Bij dit pakket betaal je 4,99 euro aan verzendkosten.'"></app-order-option>
+    </div>
+    <div class="order__option">
+      <app-order-option [amount]="20" [information]="'Het minimaal aantal wordt 20 pakketten.'" [delivery]="'Bij dit pakket betaal je 4,99 euro aan verzendkosten.'"></app-order-option>
+    </div>
+    <div class="order__option"> 
+      <app-order-option [amount]="30" [information]="'Het minimaal aantal wordt 30 pakketten.'" [delivery]="'Bij dit pakket betaal je geen verzendkosten!'"></app-order-option>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
