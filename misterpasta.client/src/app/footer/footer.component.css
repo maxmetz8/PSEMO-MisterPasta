@@ -1,0 +1,54 @@
+.footer--container {
+  background-color: var(--red);
+  min-height: 12rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer--item {
+  color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  min-width: 12rem;
+}
+
+.footer--item a {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 0.25rem;
+}
+
+.footer--references {
+  list-style: none;
+  padding: 0;
+}
+
+.footer--references a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width:898px) {
+
+  .footer--container {
+    display: grid;
+    grid-template-areas: "socials paymentoptions"
+                         "otherinfo address";
+  }
+
+  .footer--item {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:460px) {
+
+  .footer--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
