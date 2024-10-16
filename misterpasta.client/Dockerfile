@@ -8,6 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Installeer de dependencies
+RUN npm install -g @angular/cli
 RUN npm install
 
 # Kopieer de rest van de applicatiecode naar de container
@@ -22,8 +23,8 @@ FROM nginx:alpine
 # Kopieer de gecompileerde bestanden van de vorige stap naar de Nginx root directory
 COPY --from=build /app/dist/misterpasta.client/browser /usr/share/nginx/html
 
-# Exposeer poort 80 voor Nginx
-EXPOSE 80
+# Exposeer poort 4200 voor Nginx
+EXPOSE 4200
 
 # Start Nginx wanneer de container start
 CMD ["nginx", "-g", "daemon off;"]
