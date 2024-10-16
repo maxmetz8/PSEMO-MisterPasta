@@ -23,7 +23,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist/misterpasta.client/browser /usr/share/nginx/html
 
 # Exposeer poort 80 voor Nginx
-EXPOSE 4200
+EXPOSE 80
 
 # Start Nginx wanneer de container start
 CMD ["nginx", "-g", "daemon off;"]
