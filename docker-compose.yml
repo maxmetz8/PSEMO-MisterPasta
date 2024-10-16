@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: misterpasta-client
     ports:
-      - '8080:4200'
+      - '8180:4200'
     environment:
       - CHOKIDAR_USEPOLLING=true
 
@@ -17,7 +17,7 @@ services:
       dockerfile: Dockerfile
     container_name: misterpasta-server
     ports:
-      - '8081:5186'
+      - '8181:5186'
     environment:
       - ASPNETCORE_URLS=http://+:5186
       - ASPNETCORE_ENVIRONMENT=Development
