@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.sharedDataService.minimumAmount$.subscribe((amount: number) => {
       this.minimumAmount = amount;
+      console.log(this.minimumAmount);
     });
   }
 }
