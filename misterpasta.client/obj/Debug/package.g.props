@@ -13,6 +13,7 @@
     <PackageJsonScriptsStartDefault Condition="$(PackageJsonScriptsStartDefault) == ''">ng serve --ssl --ssl-cert "$HOME/.aspnet/https/${npm_package_name}.pem" --ssl-key "$HOME/.aspnet/https/${npm_package_name}.key" --host=127.0.0.1</PackageJsonScriptsStartDefault>
     <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
     <PackageJsonDependenciesAngularAnimations Condition="$(PackageJsonDependenciesAngularAnimations) == ''">^17.3.0</PackageJsonDependenciesAngularAnimations>
+    <PackageJsonDependenciesAngularCdk Condition="$(PackageJsonDependenciesAngularCdk) == ''">^17.3.10</PackageJsonDependenciesAngularCdk>
     <PackageJsonDependenciesAngularCommon Condition="$(PackageJsonDependenciesAngularCommon) == ''">^17.3.0</PackageJsonDependenciesAngularCommon>
     <PackageJsonDependenciesAngularCompiler Condition="$(PackageJsonDependenciesAngularCompiler) == ''">^17.3.0</PackageJsonDependenciesAngularCompiler>
     <PackageJsonDependenciesAngularCore Condition="$(PackageJsonDependenciesAngularCore) == ''">^17.3.0</PackageJsonDependenciesAngularCore>

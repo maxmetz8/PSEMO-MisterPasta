@@ -1,0 +1,35 @@
+.order-option {
+  height: 450px;
+  width: 350px;
+  border-radius: 10px;
+  background-color: var(--white);
+  opacity: 90%;
+  display: grid;
+  grid-row-gap: 1rem;
+  place-items: center;
+  padding: 1rem;
+}
+
+.order-option__image {
+  width: 90%;
+  height: 200px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.order-option__information {
+}
+
+
+.order-option__button button {
+    all: unset;
+    background-color: var(--green--interactive);
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.order-option__button button:hover {
+    cursor: pointer;
+}
