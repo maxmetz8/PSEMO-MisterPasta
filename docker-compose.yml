@@ -10,6 +10,12 @@ services:
       - '8182:4200'
     environment:
       - CHOKIDAR_USEPOLLING=true
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.misterpasta-client.rule=Host(`misterpasta.sslip.io`)"
+      - "traefik.http.services.misterpasta-client.loadbalancer.server.port=4200"
+      - "traefik.http.routers.misterpasta-client.entrypoints=http"
+      - "traefik.http.routers.misterpasta-client.tls=true"  # Voor HTTPS
 
   misterpasta-server:
     build:
@@ -22,6 +28,30 @@ services:
       - ASPNETCORE_URLS=http://+:5186
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.SpaProxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.misterpasta-server.rule=Host(`misterpasta-server.sslip.io`)"
+      - "traefik.http.services.misterpasta-server.loadbalancer.server.port=5186"
+      - "traefik.http.routers.misterpasta-server.entrypoints=http"
+      - "traefik.http.routers.misterpasta-server.tls=true"  # Voor HTTPS
+
+  traefik:
+    image: traefik:v3.1
+    container_name: traefik
+    ports:
+      - "80:80"
+      - "443:443"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.http.address=:80"
+      - "--entrypoints.https.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=youremail@example.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./letsencrypt:/letsencrypt"
 
 volumes:
   node_modules:
