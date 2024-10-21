@@ -8,7 +8,10 @@
 }
 
 .menu__interactive {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25rem;
 }
 
 .menu__counter {
