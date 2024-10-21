@@ -6,8 +6,11 @@ services:
       context: ./misterpasta.client
       dockerfile: Dockerfile
     container_name: misterpasta-client
-    ports:
-      - '3389:80'
+    # Verwijder of commenteer de 'ports' sectie
+    # ports:
+    #   - '3389:80'
+    expose:
+      - '80'
     environment:
       - CHOKIDAR_USEPOLLING=true
 
@@ -16,8 +19,11 @@ services:
       context: ./MisterPasta.Server
       dockerfile: Dockerfile
     container_name: misterpasta-server
-    ports:
-      - '5186:5186'
+    # Verwijder of commenteer de 'ports' sectie
+    # ports:
+    #   - '5186:5186'
+    expose:
+      - '5186'
     environment:
       - ASPNETCORE_URLS=http://+:5186
       - ASPNETCORE_ENVIRONMENT=Development
