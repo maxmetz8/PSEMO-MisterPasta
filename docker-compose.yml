@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: misterpasta-client
     ports:
-      - '80:80'
+      - '443:80'
     environment:
       - CHOKIDAR_USEPOLLING=true
 
