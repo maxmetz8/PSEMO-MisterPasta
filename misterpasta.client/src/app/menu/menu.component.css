@@ -1,0 +1,28 @@
+.menu {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+.menu__interactive {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25rem;
+}
+
+.menu__counter {
+}
+
+.menu__filter {
+
+}
+
+.menu__products {
+  display: grid;
+  grid-gap: 2rem 0rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}

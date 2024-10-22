@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { OrderOptionComponent } from './order/order-option/order-option.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MenuComponent } from './menu/menu.component';
+import { MealComponent } from './menu/meal/meal.component';
+import { FilterComponent } from './menu/filter/filter.component';
+import { CounterComponent } from './menu/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     FooterComponent,
     OrderOptionComponent,
-    MenuComponent
+    MenuComponent,
+    MealComponent,
+    FilterComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

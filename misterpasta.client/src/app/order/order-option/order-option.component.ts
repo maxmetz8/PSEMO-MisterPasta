@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { Router } from '@angular/router';
-import { ShareAmountService } from '../../order/share-amount.service';
+import { ShareAmountService } from "../../menu/share-amount.service";
 
 @Component({
   selector: 'app-order-option',
