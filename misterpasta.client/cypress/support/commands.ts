@@ -16,7 +16,7 @@ Cypress.Commands.add('choosePackage', (minimumAmount: number) => {
   cy.get('[data-cy="order-option-' + minimumAmount + '"]').click();
   cy.url().should('include', Cypress.env('menu_url'));
 
-  cy.get('[data-cy="counter-value"]').should('eq', minimumAmount);
+  cy.get('[data-cy="counter-value"]').should('have.text', minimumAmount);
 })
 
 Cypress.Commands.add('checkNavbar', (dataAttribute: string, page?: string) => {

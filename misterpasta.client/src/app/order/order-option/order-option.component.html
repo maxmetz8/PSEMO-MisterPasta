@@ -1,4 +1,4 @@
-<div class="order-option">
+<div class="order-option" >
   <div class="order-option__image">
 
   </div>
@@ -11,6 +11,6 @@
     <p>{{delivery}}</p>
   </div>
   <div class="order-option__button">
-    <button (click)="onChoose()">Kies</button>
+    <button [attr.data-cy]="'order-option-' + amount" (click)="onChoose()">Kies</button>
   </div>
 </div>
