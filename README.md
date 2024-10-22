@@ -34,3 +34,7 @@ bijvoorbeeld: bugfix-#2/error-message-not-shown
 3. coolify is geconfigureerd met angular
 4. coolify is geconfigureerd met C#
 5. coolify is geconfigureerd met MariaDB
+
+## Entity Framework Core
+1. Gebruik versie 8.0.8. EFC tools is daardoor ook versie 8.0.8
+2. Pas geen migrations aan!!!

@@ -1,0 +1,26 @@
+<div class="meal">
+  <div class="meal__image">
+    <!--Hier komt de afbeelding van de maaltijd-->
+  </div>
+  <div class="meal__information">
+    <div class="information__name">
+      <!--Hier komt de naam van de maaltijd-->
+      <p>{{meal.name}}</p>
+    </div>
+    <div class="information__price">
+      <!--Hier komt de prijs van de maaltijd-->
+      <p>€{{meal.price}}</p>
+    </div>
+  </div>
+  <div class="meal__cta">
+    <div class="meal__counter">
+      <!--Hier komt de telle van de maaltijd (waarschijnlijk een losse component)-->
+      <button class="counter__cta red" (click)="subtractAmount()">-</button>
+      <p>{{amount}}</p>
+      <button class="counter__cta green" (click)="addAmount()">+</button>
+    </div>
+    <div class="meal__add-to-cart">
+      <button>In winkelwagen</button>
+    </div>
+  </div>
+</div>

@@ -17,10 +17,6 @@
   border-radius: 5px;
 }
 
-.order-option__information {
-}
-
-
 .order-option__button button {
     all: unset;
     background-color: var(--green--interactive);
