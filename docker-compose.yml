@@ -10,7 +10,8 @@ services:
       - '3389:443'
     environment:
       - CHOKIDAR_USEPOLLING=true
-
+    networks:
+      - app-network
   misterpasta-server:
     build:
       context: ./MisterPasta.Server
@@ -22,6 +23,24 @@ services:
       - ASPNETCORE_URLS=http://+:5186
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.SpaProxy
+    depends_on:
+      - db
+    networks:
+      - app-network
+  db:
+    image: mariadb:11
+    container_name: misterpasta-db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
 
 volumes:
   node_modules:
+  
