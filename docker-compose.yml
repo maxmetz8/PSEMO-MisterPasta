@@ -43,4 +43,8 @@ services:
 
 volumes:
   node_modules:
+
+networks:
+ app-network:
+  driver: bridge
   
