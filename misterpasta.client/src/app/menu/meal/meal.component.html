@@ -15,9 +15,9 @@
   <div class="meal__cta">
     <div class="meal__counter">
       <!--Hier komt de telle van de maaltijd (waarschijnlijk een losse component)-->
-      <button class="counter__cta red" (click)="subtractAmount()">-</button>
-      <p>{{amount}}</p>
-      <button class="counter__cta green" (click)="addAmount()">+</button>
+      <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
+      <p data-cy="meal-amount">{{amount}}</p>
+      <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
     </div>
     <div class="meal__add-to-cart">
       <button>In winkelwagen</button>
