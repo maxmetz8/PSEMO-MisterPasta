@@ -14,5 +14,25 @@
 
         // Andere DbSets voor meer tabellen
         // public DbSet<OtherEntity> OtherEntities { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Product>().HasData(
+        new Product
+        {
+            Id = 1,
+            Name = "Spaghetti Bolognese",
+            Description = "Heerlijke spaghetti met een rijke bolognesesaus."
+        },
+        new Product
+        {
+            Id = 2,
+            Name = "Penne Arrabiata",
+            Description = "Pittige penne met een kruidige tomatensaus."
+        }
+            );
+        }
     }
-}
+
