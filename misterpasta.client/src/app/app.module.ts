@@ -16,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MealComponent } from './menu/meal/meal.component';
 import { FilterComponent } from './menu/filter/filter.component';
 import { CounterComponent } from './menu/counter/counter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { CounterComponent } from './menu/counter/counter.component';
   ],
   imports: [
     BrowserModule, HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule, FormsModule
   ],
   providers: [
     provideAnimationsAsync()
