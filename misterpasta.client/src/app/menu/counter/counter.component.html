@@ -1,3 +1,18 @@
 <div class="counter">
-  <p data-cy="counter-value">{{minimumAmount}}</p>
+  <p>Voeg producten toe</p>
+  <p data-cy="counter-value"></p>
+  <div class="filter__slidecontainer">
+    <div class="filter__slider">
+      <p>{{ sliderValue }}</p>
+      <div>
+        <input type="range"
+               min="0"
+               max="{{minimumAmount}}"
+               [(ngModel)]="sliderValue"
+               class="slider no-interaction"
+               />
+        <p>{{minimumAmount}}</p>
+      </div>
+    </div>
+  </div>
 </div>

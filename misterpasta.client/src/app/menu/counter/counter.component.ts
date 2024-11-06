@@ -8,6 +8,7 @@ import { ShareAmountService } from '../share-amount.service';
 })
 export class CounterComponent {
   minimumAmount: number = 0;
+  sliderValue: number = 0;
   constructor(private sharedDataService: ShareAmountService) { }
 
   ngOnInit() {
