@@ -1,4 +1,56 @@
+* {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .filter {
   border: 1px solid gray;
+  border-radius: 5px;
   height: 20rem;
+  display: grid;
+  padding: 0.5rem 2rem;
+  margin: 1rem 1.5rem;
+}
+
+.filter__checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__slidecontainer {
+  display: grid;
+  place-items: baseline;
+}
+
+#sliderValue {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+button {
+  all: unset;
+  background-color: var(--red);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.filter__slider {
+  width: 100%;
+}
+
+.filter__slider div {
+  display: flex;
+  justify-content: space-between;
 }

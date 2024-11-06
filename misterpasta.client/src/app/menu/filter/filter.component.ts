@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrl: './filter.component.css'
+  styleUrls: ['./filter.component.css']
 })
 export class FilterComponent {
-
+  sliderValue: number = 30;
 }
