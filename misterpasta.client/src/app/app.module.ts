@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { heroBannerComponent } from './home/heroBanner/heroBanner.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderComponent } from './order/order.component';
@@ -18,10 +19,12 @@ import { FilterComponent } from './menu/filter/filter.component';
 import { CounterComponent } from './menu/counter/counter.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    heroBannerComponent,
     AboutComponent,
     ContactComponent,
     OrderComponent,
