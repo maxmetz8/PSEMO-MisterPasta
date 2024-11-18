@@ -17,6 +17,8 @@ import { MealComponent } from './menu/meal/meal.component';
 import { FilterComponent } from './menu/filter/filter.component';
 import { CounterComponent } from './menu/counter/counter.component';
 import { FormsModule } from '@angular/forms';
+import { InfoSectionOneComponent } from './home/info-section-one/info-section-one.component';
+import { InfoSectionTwoComponent } from './home/info-section-two/info-section-two.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     MealComponent,
     FilterComponent,
-    CounterComponent
+    CounterComponent,
+    InfoSectionOneComponent,
+    InfoSectionTwoComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
