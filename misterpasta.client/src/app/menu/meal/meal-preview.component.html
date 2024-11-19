@@ -1,6 +1,9 @@
 <div class="meal">
   <div class="meal__image">
     <!--Hier komt de afbeelding van de maaltijd-->
+    <a [routerLink]="['/menu', meal.name]">
+      <img src="" alt="placeholder" />
+    </a>
   </div>
   <div class="meal__information">
     <div class="information__name">

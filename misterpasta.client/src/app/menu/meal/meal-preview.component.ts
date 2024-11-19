@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Meal } from '../../../../models/Meal';
 
 @Component({
-  selector: 'app-meal',
-  templateUrl: './meal.component.html',
-  styleUrl: './meal.component.css'
+  selector: 'app-meal-preview',
+  templateUrl: './meal-preview.component.html',
+  styleUrl: './meal-preview.component.css'
 })
-export class MealComponent {
+export class MealPreviewComponent {
   @Input() meal: Meal;
   amount: number = 0;
   constructor() {
