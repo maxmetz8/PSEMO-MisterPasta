@@ -1,0 +1,81 @@
+.heroBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__background {
+  background-image: url(../../../assets/Hero-image-ingredients.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero__text {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Playwrite IS", cursive;
+  font-weight: 200;
+  padding: 1rem;
+  margin: 0;
+}
+
+.review__banner {
+  background-image: url(../../../assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+
+.review__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.review__item {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: lightgray;
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-weight:lighter;
+}
+
+.review__item strong {
+    font-size: 2rem;
+    font-weight: bold;
+    color:white;
+ }
+
+.review__stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 0.5rem;
+    color: white;
+}
+
+.stars-image {
+  height: 1rem;
+  width: auto;
+}
