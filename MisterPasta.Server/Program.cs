@@ -14,7 +14,7 @@ builder.Configuration
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<FilterService>();
 
-// Add DbContext with MariaDB connection
+ //Add DbContext with MariaDB connection
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
