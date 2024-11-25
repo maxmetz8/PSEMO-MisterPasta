@@ -1,0 +1,112 @@
+.WebsiteInfoBoxOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.WebsiteInfoBoxOne__background {
+  background-image: url('/assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+  width: 100%;
+  position: relative;
+  padding: 0 10%;
+}
+
+.premium-pasta-image {
+  max-width: 37rem;
+  height:32rem;
+  border-radius: 5px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.WebsiteInfoBoxOne__content {
+  z-index: 1;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  color: white;
+  text-align: left;
+  background-color: #821618;
+  border-radius: 10px;
+  margin-left:-40px;
+  
+}
+
+.WebsiteInfoBoxOne__content__textbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.InfoTitel {
+  padding: 1rem;
+}
+
+.InfoText {
+  width: 10rem;
+  height: 16rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:12px;
+}
+
+
+
+.WebsiteInfoBoxOne__button {
+  all: unset;
+  background-color: var(--green--interactive);
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+  .WebsiteInfoBoxOne__button:hover {
+    background-color: #218838;
+  }
+
+.WebsiteInfoBoxOne__button__text {
+  font-size: 0.8rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 8rem;
+}
+
+.chevron-right {
+  max-width: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .WebsiteInfoBoxOne__background {
+    flex-direction: column;
+    padding: 20px; /* Verminder de padding op kleinere schermen */
+  }
+
+  .premium-pasta-image {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .WebsiteInfoBoxOne__content {
+    text-align: center; /* Voor een betere mobiele ervaring */
+  }
+}

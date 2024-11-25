@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using MisterPasta.Server;
-using System.Threading.Tasks;
 
-[ApiController]
 [Route("[controller]")]
+[ApiController]
 public class DatabaseTestController : ControllerBase
 {
 	private readonly MyDbContext _context;

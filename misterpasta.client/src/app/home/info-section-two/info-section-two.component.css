@@ -1,0 +1,125 @@
+.* {
+  font-family: "Playwrite IS", cursive;
+}
+
+.WebsiteInfoBoxTwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.WebsiteInfoBoxTwo__background {
+  background-image: url('/assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 650px;
+  width: 100%;
+  position: relative;
+  padding: 0 10%;
+}
+
+.premium-pasta-image {
+  max-width: 37rem;
+  height: 32rem;
+  border-radius: 5px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.WebsiteInfoBoxTwo__content {
+  /*  position: absolute;*/
+  z-index: 1;
+  padding-left: 4rem;
+  padding-right: 7rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  background-color: #821618;
+  border-radius: 10px;
+  max-width: 60rem;
+  max-height: 20rem;
+}
+
+.WebsiteInfoBoxTwo__content__textbox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 40px;
+}
+
+.InfoTitel {
+  padding: 1rem;
+  width: 18rem;
+  font-family: "Playwrite IS", cursive;
+  font-size: 12px;
+  text-align:center;
+}
+
+.InfoTextSubTittle {
+  font-family: "Playwrite IS", cursive;
+  font-size: 12px;
+}
+
+.InfoText {
+  width: 18rem;
+  height: 5rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+}
+
+
+
+.WebsiteInfoBoxTwo__button {
+  all: unset;
+  background-color: var(--green--interactive);
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  color: var(--white);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:1rem;
+}
+
+  .WebsiteInfoBoxTwo__button:hover {
+    background-color: #218838;
+  }
+
+.WebsiteInfoBoxTwo__button__text {
+  font-size: 0.8rem;
+  color: white;
+  flex-direction: row;
+  width: 7rem;
+}
+
+.chevron-right {
+  max-width: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .WebsiteInfoBoxTwo__background {
+    flex-direction: column;
+    padding: 20px; /* Verminder de padding op kleinere schermen */
+  }
+
+  .premium-pasta-image {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .WebsiteInfoBoxTwo__content {
+    text-align: center; /* Voor een betere mobiele ervaring */
+  }
+}

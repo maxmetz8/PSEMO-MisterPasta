@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MisterPasta.Server.Services;
 using MyDbContext = MisterPasta.Server.MyDbContext;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,15 +7,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Configureer de applicatie om omgevingsvariabelen te laden
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
     .AddEnvironmentVariables();
 
-//Add services to the container.
+// Add services to the container.
+builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<FilterService>();
 
  //Add DbContext with MariaDB connection
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
-       ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
     )
 );
 
