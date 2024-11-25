@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { heroBannerComponent } from './home/heroBanner/heroBanner.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { OrderComponent } from './order/order.component';
@@ -20,10 +21,12 @@ import { FormsModule } from '@angular/forms';
 import { InfoSectionOneComponent } from './home/info-section-one/info-section-one.component';
 import { InfoSectionTwoComponent } from './home/info-section-two/info-section-two.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    heroBannerComponent,
     AboutComponent,
     ContactComponent,
     OrderComponent,
