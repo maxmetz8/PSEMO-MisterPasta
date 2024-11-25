@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'order', component: OrderComponent },
   { path: 'cart', component: CartComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'menu/:name', component: ProductPageComponent },
+  { path: 'menu/:id', component: ProductPageComponent },
   { path: '**', component: HomeComponent}
 ];
 

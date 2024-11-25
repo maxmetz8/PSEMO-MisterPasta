@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
+import { Meal } from '../../../models/Meal';
 
 @Component({
   selector: 'app-menu',
@@ -7,15 +8,21 @@ import { Component, OnInit, inject } from '@angular/core';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent implements OnInit {
-  httpClient = inject(HttpClient);
+  meals: Meal[] = [];
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {
     this.fetchProducts();
   }
 
   fetchProducts() {
-    this.httpClient.get('https://localhost:7191/api/Products').subscribe(data => {
-      console.log(data);
-    })
+    this.httpClient.get<Meal[]>('https://localhost:7191/api/Products').subscribe(
+      (data) => {
+        this.meals = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
   }
 }

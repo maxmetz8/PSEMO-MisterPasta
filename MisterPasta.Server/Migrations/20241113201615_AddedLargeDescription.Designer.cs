@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MisterPasta.Server;
 
@@ -10,9 +11,11 @@ using MisterPasta.Server;
 namespace MisterPasta.Server.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241113201615_AddedLargeDescription")]
+    partial class AddedLargeDescription
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,15 +35,6 @@ namespace MisterPasta.Server.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<bool>("IsHalal")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("IsVegan")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("IsVegetarian")
-                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("LargeDescription")
                         .IsRequired()
@@ -62,9 +56,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 1,
                             Description = "Lange slierten spaghetti in een rijke saus van gehakt, tomaten, en kruiden. Een hartverwarmende klassieker die perfect is voor elke pasta-liefhebber.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Spaghetti Bolognese",
                             Price = 10.99
@@ -73,9 +64,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 2,
                             Description = "Pittige penne met een kruidige tomatensaus.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Lasagne",
                             Price = 12.99
@@ -84,9 +72,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 3,
                             Description = "Romige spaghetti zonder room, maar met een saus van eieren, Parmezaanse kaas en knapperige guanciale. De volle, romige smaak smelt op de tong.",
-                            IsHalal = false,
-                            IsVegan = false,
-                            IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Carbonara",
                             Price = 10.99
@@ -95,9 +80,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 4,
                             Description = "Pittige tomatensaus met knoflook en rode peper geeft deze penne een vurige kick. Ideaal voor wie van een beetje spice houdt!",
-                            IsHalal = true,
-                            IsVegan = true,
-                            IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Penne all’Arrabbiata",
                             Price = 12.99
@@ -106,9 +88,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 5,
                             Description = "Rijke en romige fettuccine, overgoten met een boterachtige Parmezaansaus die smelt in je mond. Het perfecte comfortfood voor een luxueuze traktatie.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Fettuccine Alfredo",
                             Price = 10.99
@@ -117,9 +96,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 6,
                             Description = "Traditionele Siciliaanse pasta met zachte aubergine, tomatensaus en gezouten ricotta. Een verfijnde mix van zoete en hartige smaken.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Pasta alla Norma",
                             Price = 12.99
@@ -128,9 +104,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 7,
                             Description = "Kleine ringvormige pasta gevuld met vlees of kaas, geserveerd in een delicate bouillon. Comfort in een kom, ideaal voor koude dagen.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Tortellini in Brodo",
                             Price = 10.99
@@ -139,9 +112,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 8,
                             Description = "Een smaakvolle mix van tomaten, olijven, kappertjes en ansjovis, die deze pasta een zoute, hartige kick geeft. Perfect voor wie houdt van intense Mediterrane smaken.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Pasta Putanesca",
                             Price = 12.99
@@ -150,9 +120,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 9,
                             Description = "Simpele maar smaakvolle spaghetti met alleen Pecorino Romano en versgemalen zwarte peper. Dit gerecht is de ultieme Italiaanse comfortfood met een zijdezachte, romige saus.",
-                            IsHalal = true,
-                            IsVegan = false,
-                            IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Cacio e Pepe",
                             Price = 10.99
@@ -161,9 +128,6 @@ namespace MisterPasta.Server.Migrations
                         {
                             ProductId = 10,
                             Description = "Lenteachtige pasta met kleurrijke, knapperige groenten zoals paprika, courgette en cherrytomaatjes in een lichte olijfolie-saus. Fris, levendig en vol van smaak!",
-                            IsHalal = true,
-                            IsVegan = true,
-                            IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Pasta Primavera",
                             Price = 12.99
