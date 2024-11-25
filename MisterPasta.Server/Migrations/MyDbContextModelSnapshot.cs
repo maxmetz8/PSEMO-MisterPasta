@@ -16,20 +16,33 @@ namespace MisterPasta.Server.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
             modelBuilder.Entity("MisterPasta.Server.Models.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("ProductId"));
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("IsHalal")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("IsVegan")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("IsVegetarian")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("LargeDescription")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -37,22 +50,123 @@ namespace MisterPasta.Server.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("Id");
+                    b.Property<double>("Price")
+                        .HasColumnType("double");
+
+                    b.HasKey("ProductId");
 
                     b.ToTable("Products");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            Description = "Heerlijke spaghetti met een rijke bolognesesaus.",
-                            Name = "Spaghetti Bolognese"
+                            ProductId = 1,
+                            Description = "Lange slierten spaghetti in een rijke saus van gehakt, tomaten, en kruiden. Een hartverwarmende klassieker die perfect is voor elke pasta-liefhebber.",
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = false,
+                            LargeDescription = "",
+                            Name = "Spaghetti Bolognese",
+                            Price = 10.99
                         },
                         new
                         {
-                            Id = 2,
+                            ProductId = 2,
                             Description = "Pittige penne met een kruidige tomatensaus.",
-                            Name = "Penne Arrabiata"
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = false,
+                            LargeDescription = "",
+                            Name = "Lasagne",
+                            Price = 12.99
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            Description = "Romige spaghetti zonder room, maar met een saus van eieren, Parmezaanse kaas en knapperige guanciale. De volle, romige smaak smelt op de tong.",
+                            IsHalal = false,
+                            IsVegan = false,
+                            IsVegetarian = false,
+                            LargeDescription = "",
+                            Name = "Carbonara",
+                            Price = 10.99
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            Description = "Pittige tomatensaus met knoflook en rode peper geeft deze penne een vurige kick. Ideaal voor wie van een beetje spice houdt!",
+                            IsHalal = true,
+                            IsVegan = true,
+                            IsVegetarian = true,
+                            LargeDescription = "",
+                            Name = "Penne all’Arrabbiata",
+                            Price = 12.99
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            Description = "Rijke en romige fettuccine, overgoten met een boterachtige Parmezaansaus die smelt in je mond. Het perfecte comfortfood voor een luxueuze traktatie.",
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = true,
+                            LargeDescription = "",
+                            Name = "Fettuccine Alfredo",
+                            Price = 10.99
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            Description = "Traditionele Siciliaanse pasta met zachte aubergine, tomatensaus en gezouten ricotta. Een verfijnde mix van zoete en hartige smaken.",
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = true,
+                            LargeDescription = "",
+                            Name = "Pasta alla Norma",
+                            Price = 12.99
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            Description = "Kleine ringvormige pasta gevuld met vlees of kaas, geserveerd in een delicate bouillon. Comfort in een kom, ideaal voor koude dagen.",
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = false,
+                            LargeDescription = "",
+                            Name = "Tortellini in Brodo",
+                            Price = 10.99
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            Description = "Een smaakvolle mix van tomaten, olijven, kappertjes en ansjovis, die deze pasta een zoute, hartige kick geeft. Perfect voor wie houdt van intense Mediterrane smaken.",
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = false,
+                            LargeDescription = "",
+                            Name = "Pasta Putanesca",
+                            Price = 12.99
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            Description = "Simpele maar smaakvolle spaghetti met alleen Pecorino Romano en versgemalen zwarte peper. Dit gerecht is de ultieme Italiaanse comfortfood met een zijdezachte, romige saus.",
+                            IsHalal = true,
+                            IsVegan = false,
+                            IsVegetarian = true,
+                            LargeDescription = "",
+                            Name = "Cacio e Pepe",
+                            Price = 10.99
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            Description = "Lenteachtige pasta met kleurrijke, knapperige groenten zoals paprika, courgette en cherrytomaatjes in een lichte olijfolie-saus. Fris, levendig en vol van smaak!",
+                            IsHalal = true,
+                            IsVegan = true,
+                            IsVegetarian = true,
+                            LargeDescription = "",
+                            Name = "Pasta Primavera",
+                            Price = 12.99
                         });
                 });
 #pragma warning restore 612, 618

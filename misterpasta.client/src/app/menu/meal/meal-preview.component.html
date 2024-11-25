@@ -1,0 +1,25 @@
+<div class="meal">
+  <div class="meal__image">
+    <a [routerLink]="['/menu', meal.productId]">
+      <img src="" alt="placeholder" />
+    </a>
+  </div>
+  <div class="meal__information">
+    <div class="information__name">
+      <p>{{meal.name}}</p>
+    </div>
+    <div class="information__price">
+      <p>€{{meal.price}}</p>
+    </div>
+  </div>
+  <div class="meal__cta">
+    <div class="meal__counter">
+      <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
+      <p data-cy="meal-amount">{{amount}}</p>
+      <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
+    </div>
+    <div class="meal__add-to-cart">
+      <button>In winkelwagen</button>
+    </div>
+  </div>
+</div>
