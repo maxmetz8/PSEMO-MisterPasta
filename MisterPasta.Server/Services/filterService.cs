@@ -12,7 +12,7 @@ namespace MisterPasta.Server.Services
             _context = context;
         }
 
-        public Task<IEnumerable<ProductDTO>> Filter(ProductRequestDTO productRequest)
+        public Task<IEnumerable<Product>> Filter(ProductRequestDTO productRequest)
         {
             IEnumerable<Product> query = _context.Products.AsQueryable();
 
@@ -36,9 +36,7 @@ namespace MisterPasta.Server.Services
                 query = query.Where(p => p.Price <= productRequest.MaxPrice.Value);
             }
 
-            IEnumerable<ProductDTO> products = query.Select(product => ProductDTO.ProductMapper(product));
-
-            return Task.FromResult(products);
+            return Task.FromResult(query);
         }
     }
 }

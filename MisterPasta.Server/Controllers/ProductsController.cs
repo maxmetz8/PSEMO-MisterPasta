@@ -20,7 +20,7 @@ namespace MisterPasta.Server.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             var products = await _productService.GetProducts();
             return Ok(products);
@@ -28,13 +28,13 @@ namespace MisterPasta.Server.Controllers
 
         // GET: api/Products/id
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductDTO>> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(int id)
         {
             return await _productService.GetProductById(id);
         }
 
         [HttpPost("Filter")]
-        public async Task<IEnumerable<ProductDTO>> Search(ProductRequestDTO? productRequest)
+        public async Task<IEnumerable<Product>> Search(ProductRequestDTO? productRequest)
         {
             if (productRequest != null)
             {

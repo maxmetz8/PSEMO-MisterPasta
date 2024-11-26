@@ -12,14 +12,14 @@ namespace MisterPasta.Server.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<ProductDTO>> GetProducts()
+        public async Task<IEnumerable<Product>> GetProducts()
         {
             IEnumerable<Product> products = await _context.Products.ToListAsync();
 
-            return products.Select(product => ProductDTO.ProductMapper(product));
+            return products;
         }
 
-        public async Task<ProductDTO> GetProductById(int id)
+        public async Task<Product> GetProductById(int id)
         {
             var product = await _context.Products.FindAsync(id);
 
@@ -28,7 +28,7 @@ namespace MisterPasta.Server.Services
                 return null;
             }
 
-            return ProductDTO.ProductMapper(product);
+            return product;
         }
     }
 }

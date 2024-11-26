@@ -1,20 +1,19 @@
 <div class="meal">
   <div class="meal__image">
-    <!--Hier komt de afbeelding van de maaltijd-->
+    <a [routerLink]="['/menu', meal.productId]">
+      <img src="" alt="placeholder" />
+    </a>
   </div>
   <div class="meal__information">
     <div class="information__name">
-      <!--Hier komt de naam van de maaltijd-->
       <p>{{meal.name}}</p>
     </div>
     <div class="information__price">
-      <!--Hier komt de prijs van de maaltijd-->
       <p>€{{meal.price}}</p>
     </div>
   </div>
   <div class="meal__cta">
     <div class="meal__counter">
-      <!--Hier komt de telle van de maaltijd (waarschijnlijk een losse component)-->
       <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
       <p data-cy="meal-amount">{{amount}}</p>
       <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
