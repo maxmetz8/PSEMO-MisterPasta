@@ -38,13 +38,10 @@ using (var scope = app.Services.CreateScope())
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin());
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin());
+
 
 app.UseHttpsRedirection();
 
