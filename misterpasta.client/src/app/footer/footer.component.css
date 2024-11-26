@@ -1,4 +1,7 @@
 .footer--container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
   background-color: var(--red);
   min-height: 12rem;
   display: flex;

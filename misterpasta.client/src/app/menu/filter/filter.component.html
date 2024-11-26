@@ -3,34 +3,31 @@
   <div class="filter__checkbox">
     <label for="vegetarian">Vegetarisch</label>
     <input [(ngModel)]="vegetarianChecked" type="checkbox" id="vegetarian" name="vegetarian" />
-    {{vegetarianChecked}}
   </div>
   <div class="filter__checkbox">
     <label for="vegan">Vegan</label>
     <input [(ngModel)]="veganChecked" type="checkbox" id="vegan" name="vegan" />
-    {{veganChecked}}
   </div>
   <div class="filter__checkbox">
     <label for="halal">Halal</label>
     <input [(ngModel)]="halalChecked" type="checkbox" id="halal" name="halal" />
-    {{halalChecked}}
   </div>
   <div class="filter__slidecontainer">
     <label>Maxprijs</label>
     <div class="filter__slider">
-      <p>€{{ sliderValue }}</p>
+      <p>€{{ maxPrice }}</p>
       <div>
         <p>€0</p>
         <input type="range"
                min="0"
                max="30"
-               [(ngModel)]="sliderValue"
+               [(ngModel)]="maxPrice"
                class="slider" />
         <p>€30</p>
       </div>
     </div>
   </div>
   <div class="filter__cta">
-    <button>Pas filters toe</button>
+    <button (click)="filterProducts()">Pas filters toe</button>
   </div>
 </div>
