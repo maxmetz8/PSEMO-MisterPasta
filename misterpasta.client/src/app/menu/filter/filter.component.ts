@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meal } from '../../../../models/Meal';
 
 @Component({
   selector: 'app-filter',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class FilterComponent {
   sliderValue: number = 30;
+
+  vegetarianChecked: boolean = false;
+  veganChecked: boolean = false;
+  halalChecked: boolean = false;
+
+
+  filterProducts(): Meal[] {
+
+
+  }
 }
