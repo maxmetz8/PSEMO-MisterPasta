@@ -1,0 +1,34 @@
+.best-seller-item {
+  width: 16rem;
+  border-radius: 10px;
+  background-color: var(--white);
+  opacity: 90%;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.best-seller__information{
+    margin:0.5rem;
+}
+
+.best-seller__image {
+  width: 90%;
+  height: 200px;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.best-seller__button button {
+  all: unset;
+  background-color: var(--green--interactive);
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  color: var(--white);
+  margin:0.5rem;
+}
+
+  .best-seller__button button:hover {
+    cursor: pointer;
+  }
