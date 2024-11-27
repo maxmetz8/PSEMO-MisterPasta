@@ -21,6 +21,7 @@ import { ProductPageComponent } from './menu/product-page/product-page.component
 import { InfoSectionTwoComponent } from './home/info-section-two/info-section-two.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { HeaderComponent } from './header/header.component';
     CounterComponent,
     InfoSectionOneComponent,
     InfoSectionTwoComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
