@@ -7,7 +7,7 @@ import { Meal } from '../../../../models/Meal';
   styleUrl: './meal-preview.component.css'
 })
 export class MealPreviewComponent implements OnInit{
-  @Input() meal: Meal = new Meal(0, '','', 0, '');
+  @Input() meal: Meal = new Meal(0, '','', 0, '', 0);
   amount: number = 0;
 
   ngOnInit() {
