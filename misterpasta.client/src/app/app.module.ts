@@ -21,6 +21,8 @@ import { ProductPageComponent } from './menu/product-page/product-page.component
 import { InfoSectionTwoComponent } from './home/info-section-two/info-section-two.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { BestSellersComponent } from './home/best-sellers/best-sellers.component';
+import { BestSellerItemComponent } from './home/best-sellers/best-seller-item/best-seller-item.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 
 
@@ -43,6 +45,8 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     InfoSectionOneComponent,
     InfoSectionTwoComponent,
     ProductPageComponent,
+    BestSellersComponent,
+    BestSellerItemComponent,
     CartItemComponent
   ],
   imports: [
