@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MisterPasta.Server;
 
@@ -10,9 +11,11 @@ using MisterPasta.Server;
 namespace MisterPasta.Server.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241202112645_AddedCartModel")]
+    partial class AddedCartModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,6 +23,39 @@ namespace MisterPasta.Server.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
+
+            modelBuilder.Entity("MisterPasta.Server.Models.Cart", b =>
+                {
+                    b.Property<int>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CartId"));
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductImage")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CartId");
+
+                    b.ToTable("Carts");
+                });
 
             modelBuilder.Entity("MisterPasta.Server.Models.Product", b =>
                 {
@@ -53,9 +89,6 @@ namespace MisterPasta.Server.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("double");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductId");
 
                     b.ToTable("Products");
@@ -70,8 +103,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Spaghetti Bolognese",
-                            Price = 10.99,
-                            Quantity = 1
+                            Price = 10.99
                         },
                         new
                         {
@@ -82,8 +114,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Lasagne",
-                            Price = 12.99,
-                            Quantity = 1
+                            Price = 12.99
                         },
                         new
                         {
@@ -94,8 +125,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Carbonara",
-                            Price = 10.99,
-                            Quantity = 1
+                            Price = 10.99
                         },
                         new
                         {
@@ -106,8 +136,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Penne all’Arrabbiata",
-                            Price = 12.99,
-                            Quantity = 1
+                            Price = 12.99
                         },
                         new
                         {
@@ -118,8 +147,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Fettuccine Alfredo",
-                            Price = 10.99,
-                            Quantity = 1
+                            Price = 10.99
                         },
                         new
                         {
@@ -130,8 +158,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Pasta alla Norma",
-                            Price = 12.99,
-                            Quantity = 1
+                            Price = 12.99
                         },
                         new
                         {
@@ -142,8 +169,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Tortellini in Brodo",
-                            Price = 10.99,
-                            Quantity = 1
+                            Price = 10.99
                         },
                         new
                         {
@@ -154,8 +180,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Pasta Putanesca",
-                            Price = 12.99,
-                            Quantity = 1
+                            Price = 12.99
                         },
                         new
                         {
@@ -166,8 +191,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Cacio e Pepe",
-                            Price = 10.99,
-                            Quantity = 1
+                            Price = 10.99
                         },
                         new
                         {
@@ -178,8 +202,7 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Pasta Primavera",
-                            Price = 12.99,
-                            Quantity = 1
+                            Price = 12.99
                         });
                 });
 #pragma warning restore 612, 618

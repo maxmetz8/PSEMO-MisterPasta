@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MisterPasta.Server;
 
@@ -10,9 +11,11 @@ using MisterPasta.Server;
 namespace MisterPasta.Server.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241203100916_ChangedProductModelAndRemovedCart")]
+    partial class ChangedProductModelAndRemovedCart
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -71,7 +74,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Spaghetti Bolognese",
                             Price = 10.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -83,7 +86,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Lasagne",
                             Price = 12.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -95,7 +98,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Carbonara",
                             Price = 10.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -107,7 +110,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Penne all’Arrabbiata",
                             Price = 12.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -119,7 +122,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Fettuccine Alfredo",
                             Price = 10.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -131,7 +134,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Pasta alla Norma",
                             Price = 12.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -143,7 +146,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Tortellini in Brodo",
                             Price = 10.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -155,7 +158,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Pasta Putanesca",
                             Price = 12.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -167,7 +170,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Cacio e Pepe",
                             Price = 10.99,
-                            Quantity = 1
+                            Quantity = 0
                         },
                         new
                         {
@@ -179,7 +182,7 @@ namespace MisterPasta.Server.Migrations
                             LargeDescription = "",
                             Name = "Pasta Primavera",
                             Price = 12.99,
-                            Quantity = 1
+                            Quantity = 0
                         });
                 });
 #pragma warning restore 612, 618

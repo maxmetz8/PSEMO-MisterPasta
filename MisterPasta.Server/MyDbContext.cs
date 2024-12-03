@@ -30,6 +30,7 @@
                     IsVegetarian = false,
                     IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -41,6 +42,7 @@
                     IsVegetarian = false,
                     IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -52,6 +54,7 @@
                     IsVegetarian = false,
                     IsVegan = false,
                     IsHalal = false,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -63,6 +66,7 @@
                     IsVegetarian = true,
                     IsVegan = true,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -71,9 +75,10 @@
                     Description = "Rijke en romige fettuccine, overgoten met een boterachtige Parmezaansaus die smelt in je mond. Het perfecte comfortfood voor een luxueuze traktatie.",
                     Price = 10.99,
                     LargeDescription = "",
-                    IsVegetarian= true,
-                    IsVegan= false,
+                    IsVegetarian = true,
+                    IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -85,6 +90,7 @@
                     IsVegetarian = true,
                     IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -96,6 +102,7 @@
                     IsVegetarian = false,
                     IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -107,6 +114,7 @@
                     IsVegetarian = false,
                     IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -118,6 +126,7 @@
                     IsVegetarian = true,
                     IsVegan = false,
                     IsHalal = true,
+                    Quantity = 1
                 },
                 new Product
                 {
@@ -129,6 +138,7 @@
                     IsVegetarian = true,
                     IsVegan = true,
                     IsHalal = true,
+                    Quantity = 1
                 }
 
             );
