@@ -15,11 +15,12 @@
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content:center;
-  height: 650px;
+  justify-content: center;
+  height: 750px;
   width: 100%;
   position: relative;
   padding: 0 10%;
+  box-shadow: inset 10px 15px 9px rgba(0, 0, 0, 0.4);
 }
 
 .premium-pasta-image {
@@ -29,10 +30,10 @@
   object-fit: cover;
   position: relative;
   z-index: 1;
+  box-shadow: 15px 10px 6px rgba(0, 0, 0, 0.4);
 }
 
 .WebsiteInfoBoxTwo__content {
-  /*  position: absolute;*/
   z-index: 1;
   padding-left: 4rem;
   padding-right: 7rem;
@@ -47,6 +48,7 @@
   border-radius: 10px;
   max-width: 60rem;
   max-height: 20rem;
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .WebsiteInfoBoxTwo__content__textbox {
@@ -88,9 +90,10 @@
   border-radius: 10px;
   color: var(--white);
   display: flex;
-  justify-content:center;
-  align-items:center;
-  margin-top:1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
   .WebsiteInfoBoxTwo__button:hover {
