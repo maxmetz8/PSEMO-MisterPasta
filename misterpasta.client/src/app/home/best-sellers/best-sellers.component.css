@@ -1,0 +1,32 @@
+* {
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.best-sellers {
+  display: grid;
+  background-image: url(../../../assets/bestsellerBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+
+.best-sellers__introduction {
+  color: white;
+  padding-top: 3rem;
+  font-size: 3rem;
+  font-family: "Playwrite IS", cursive
+}
+.best-sellers__options {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin:4rem;
+}

@@ -15,11 +15,11 @@
   <div class="meal__cta">
     <div class="meal__counter">
       <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
-      <p data-cy="meal-amount">{{amount}}</p>
+      <p data-cy="meal-amount">{{meal.quantity}}</p>
       <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
     </div>
     <div class="meal__add-to-cart">
-      <button>In winkelwagen</button>
+      <button (click)="addToCart()">In winkelwagen</button>
     </div>
   </div>
 </div>

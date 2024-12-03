@@ -1,0 +1,24 @@
+<div class="cart--item--container">
+  <a [routerLink]="['/menu', meal.productId]">
+    <img src="#" alt="{{meal.name}}" />
+  </a>
+  <div class="cart--item--product--title">
+    <h2>{{meal.name}}</h2>
+    <p>{{meal.name}}</p>
+  </div>
+    <div class="cart__cta">
+      <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
+      <p data-cy="meal-amount">{{currentAmount}}</p>
+      <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
+    </div>
+    <div class="cart--item--product--price">
+      <p>€ {{meal.price}}</p>
+    </div>
+    <div class="cart--item--delete--button--container">
+      <button (click)="removeItem()" class="cart--item--delete--button">
+        <svg width="20" height="23" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5 1.16667H13.125L11.875 0H5.625L4.375 1.16667H0V3.5H17.5M1.25 18.6667C1.25 19.2855 1.51339 19.879 1.98223 20.3166C2.45107 20.7542 3.08696 21 3.75 21H13.75C14.413 21 15.0489 20.7542 15.5178 20.3166C15.9866 19.879 16.25 19.2855 16.25 18.6667V4.66667H1.25V18.6667Z" fill="#3D3D3D" />
+        </svg>
+      </button>
+    </div>
+  </div>

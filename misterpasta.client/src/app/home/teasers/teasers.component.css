@@ -1,0 +1,33 @@
+* {
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.teaser {
+  display: grid;
+  background-image: url(../../../assets/teaserBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.teaser__introduction {
+  color: white;
+  padding-top: 3rem;
+  font-size: 3rem;
+  font-family: "Playwrite IS", cursive;
+}
+
+.teaser__options {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 3rem;
+}

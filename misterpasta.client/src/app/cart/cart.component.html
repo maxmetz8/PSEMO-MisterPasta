@@ -1,3 +1,37 @@
 <app-header></app-header>
-<p>cart works!</p>
+<div class="cart__view--container">
+  <div class="cart--container">
+    <div class="cart__product--container">
+      <p *ngIf="cartItems.length == 0">Geen producten in winkelmand</p>
+      <app-cart-item *ngFor="let cartItem of cartItems"
+                     [meal]="cartItem"
+                     [currentAmount]="cartItem.quantity"></app-cart-item>
+    </div>
+    <div class="cart__checkout--container">
+      <div class="cart__price--container">
+        <div>
+          <p>Subtotaal:</p>
+          <p>€{{totalProductPrice}}</p>
+        </div>
+        <div>
+          <p>Verzendkosten:</p>
+          <p>€{{0}}</p>
+        </div>
+        <div class="cart__price--total">
+          <p>Totaal:</p>
+          <p>€{{totalProductPrice}}</p>
+        </div>
+      </div>
+      <div class="cart__checkout--button--container">
+        <button routerLink="/check-out" class="cart__checkout--button">
+          <p>Afrekenen</p>
+          <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.1844 17.7361C12.0992 17.6525 12.0316 17.5532 11.9854 17.444C11.9393 17.3347 11.9156 17.2176 11.9156 17.0994C11.9156 16.9811 11.9393 16.864 11.9854 16.7547C12.0316 16.6455 12.0992 16.5462 12.1844 16.4626L18.8701 9.89984L0.916637 9.89984C0.67353 9.89984 0.440379 9.80502 0.268476 9.63625C0.0965738 9.46748 0 9.23857 0 8.9999C0 8.76122 0.0965738 8.53231 0.268476 8.36354C0.440379 8.19477 0.67353 8.09996 0.916637 8.09996L18.8701 8.09996L12.1844 1.53715C12.0124 1.36828 11.9158 1.13925 11.9158 0.90044C11.9158 0.661628 12.0124 0.432598 12.1844 0.263733C12.3564 0.0948674 12.5897 1.77928e-09 12.8329 0C13.0762 -1.77928e-09 13.3094 0.0948674 13.4814 0.263733L21.7312 8.36319C21.8164 8.44677 21.884 8.54602 21.9301 8.65527C21.9763 8.76452 22 8.88163 22 8.9999C22 9.11816 21.9763 9.23527 21.9301 9.34452C21.884 9.45377 21.8164 9.55302 21.7312 9.6366L13.4814 17.7361C13.3963 17.8197 13.2952 17.8861 13.1839 17.9314C13.0727 17.9767 12.9534 18 12.8329 18C12.7125 18 12.5932 17.9767 12.4819 17.9314C12.3706 17.8861 12.2695 17.8197 12.1844 17.7361Z" fill="white" />
+          </svg>
+        </button>
+        <a routerLink="/menu">Of verder kijken...</a>
+      </div>
+    </div>
+  </div>
+</div>
 <app-footer></app-footer>

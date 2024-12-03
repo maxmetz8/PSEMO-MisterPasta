@@ -12,6 +12,7 @@ namespace MisterPasta.Server.Models
         public required bool IsVegetarian { get; set; }
         public required bool IsVegan { get; set; }
         public required bool IsHalal { get; set; }
+        public required int Quantity { get; set; }
     }
 
 }

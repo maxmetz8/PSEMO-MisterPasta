@@ -5,12 +5,17 @@
       <app-counter></app-counter>
     </div>
     <div class="menu__filter">
-      <app-filter></app-filter>
+      <app-filter (filteredMeals)="onMealsFiltered($event)" ></app-filter>
     </div>
   </div>
   <div class="menu__products">
-    @for (meal of meals; track meal) {
-      <app-meal-preview [meal]="meal"></app-meal-preview>
+    @if(meals.length != 0) {
+      @for (meal of meals; track meal) {
+        <app-meal-preview [meal]="meal"></app-meal-preview>
+      }
+    }
+    @else {
+      <h2>Geen producten beschikbaar</h2>
     }
   </div>
 </div>

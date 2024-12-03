@@ -53,6 +53,9 @@ namespace MisterPasta.Server.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("double");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("ProductId");
 
                     b.ToTable("Products");
@@ -67,7 +70,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Spaghetti Bolognese",
-                            Price = 10.99
+                            Price = 10.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -78,7 +82,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Lasagne",
-                            Price = 12.99
+                            Price = 12.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -89,7 +94,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Carbonara",
-                            Price = 10.99
+                            Price = 10.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -100,7 +106,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Penne all’Arrabbiata",
-                            Price = 12.99
+                            Price = 12.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -111,7 +118,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Fettuccine Alfredo",
-                            Price = 10.99
+                            Price = 10.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -122,7 +130,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Pasta alla Norma",
-                            Price = 12.99
+                            Price = 12.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -133,7 +142,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Tortellini in Brodo",
-                            Price = 10.99
+                            Price = 10.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -144,7 +154,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = false,
                             LargeDescription = "",
                             Name = "Pasta Putanesca",
-                            Price = 12.99
+                            Price = 12.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -155,7 +166,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Cacio e Pepe",
-                            Price = 10.99
+                            Price = 10.99,
+                            Quantity = 1
                         },
                         new
                         {
@@ -166,7 +178,8 @@ namespace MisterPasta.Server.Migrations
                             IsVegetarian = true,
                             LargeDescription = "",
                             Name = "Pasta Primavera",
-                            Price = 12.99
+                            Price = 12.99,
+                            Quantity = 1
                         });
                 });
 #pragma warning restore 612, 618

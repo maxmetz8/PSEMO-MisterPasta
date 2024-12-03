@@ -1,0 +1,46 @@
+.best-seller-item {
+  width: 16rem;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,.8);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  height: 28rem;
+}
+
+.best-seller__information {
+  margin: 0.5rem;
+  height: 2rem;
+  text-align: center;
+  font-family: "Playwrite IS", cursive;
+}
+
+.best-seller__info {
+  height: 11rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.best-seller__image {
+  max-width: 15rem;
+  border-radius: 5px;
+}
+  .best-seller__image img {
+    max-width: inherit;
+    height: 10rem;
+  }
+
+.best-seller__button button {
+  all: unset;
+  background-color: var(--green--interactive);
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  color: var(--white);
+  margin: 0.5rem;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.3)
+}
+
+  .best-seller__button button:hover {
+    cursor: pointer;
+  }

@@ -16,7 +16,7 @@
   top: 0;
   z-index: 2;
   font-size: 1.25rem;
-  background-color: var(--red);
+  background-color: rgba(100,20,20,.9);
   box-shadow: 0 4px 4px var(--shadow);
 }
 

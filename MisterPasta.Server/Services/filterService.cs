@@ -7,15 +7,29 @@ namespace MisterPasta.Server.Services
     public class FilterService
     {
         private readonly MyDbContext _context;
+
         public FilterService(MyDbContext context)
         {
             _context = context;
         }
 
-        public Task<IEnumerable<Product>> Filter(ProductRequestDTO productRequest)
+        public async Task<IEnumerable<Product>> Filter(ProductRequestDTO productRequest)
         {
-            IEnumerable<Product> query = _context.Products.AsQueryable();
+            // Validate the input
+            if (productRequest == null)
+            {
+                throw new ArgumentNullException(nameof(productRequest), "Product request cannot be null.");
+            }
 
+            if (productRequest.MaxPrice.HasValue && productRequest.MaxPrice.Value < 0)
+            {
+                throw new ArgumentException("MaxPrice cannot be negative.", nameof(productRequest.MaxPrice));
+            }
+
+            // Start with the base query
+            var query = _context.Products.AsQueryable();
+
+            // Apply filters
             if (productRequest.IsVegetarian.HasValue)
             {
                 query = query.Where(p => p.IsVegetarian == productRequest.IsVegetarian.Value);
@@ -36,7 +50,8 @@ namespace MisterPasta.Server.Services
                 query = query.Where(p => p.Price <= productRequest.MaxPrice.Value);
             }
 
-            return Task.FromResult(query);
+            // Execute query and return results
+            return await query.ToListAsync();
         }
     }
 }

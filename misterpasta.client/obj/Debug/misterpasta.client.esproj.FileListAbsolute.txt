@@ -1,3 +1,3 @@
 C:\Users\Metz\source\repos\MisterPasta\misterpasta.client\obj\Debug\misterpasta.client.esproj.CoreCompileInputs.cache
 C:\Users\Metz\Source\Repos\PSEMO-MisterPasta\misterpasta.client\obj\Debug\misterpasta.client.esproj.CoreCompileInputs.cache
-C:\Users\Sukhi\source\repos\PSEMO-MisterPasta\misterpasta.client\obj\Debug\misterpasta.client.esproj.CoreCompileInputs.cache
+C:\Users\Sukhi\Source\Repos\PSEMO-MisterPasta\misterpasta.client\obj\Debug\misterpasta.client.esproj.CoreCompileInputs.cache

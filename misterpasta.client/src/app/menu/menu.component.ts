@@ -25,4 +25,9 @@ export class MenuComponent implements OnInit {
       }
     )
   }
+
+  onMealsFiltered(filteredMeals: Meal[]) {
+    this.meals = filteredMeals;
+    console.log('Menu updated with filtered meals:', this.meals);
+  }
 }

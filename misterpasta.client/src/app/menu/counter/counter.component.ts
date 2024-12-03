@@ -13,8 +13,11 @@ export class CounterComponent {
 
   ngOnInit() {
     this.sharedDataService.minimumAmount$.subscribe((amount: number) => {
-      this.minimumAmount = amount;
-      console.log(this.minimumAmount);
+      localStorage.setItem('minimum amount', this.minimumAmount.toString());
     });
+  }
+
+  setMinimumAmount() {
+    
   }
 }
