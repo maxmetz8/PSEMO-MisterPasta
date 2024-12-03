@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './best-seller-item.component.css'
 })
 export class BestSellerItemComponent {
+  @Input() image: string = "";
   @Input() information: string = "";
   @Input() product: string = "";
   constructor(

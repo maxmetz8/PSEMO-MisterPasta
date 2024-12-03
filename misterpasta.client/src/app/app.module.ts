@@ -24,6 +24,8 @@ import { HeaderComponent } from './header/header.component';
 import { BestSellersComponent } from './home/best-sellers/best-sellers.component';
 import { BestSellerItemComponent } from './home/best-sellers/best-seller-item/best-seller-item.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
+import { TeasersComponent } from './home/teasers/teasers.component';
+import { TeasersItemComponent } from './home/teasers/teasers-item/teasers-item.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     ProductPageComponent,
     BestSellersComponent,
     BestSellerItemComponent,
-    CartItemComponent
+    CartItemComponent,
+    TeasersComponent,
+    TeasersItemComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
