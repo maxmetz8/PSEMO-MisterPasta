@@ -11,15 +11,15 @@
       <div class="cart__price--container">
         <div>
           <p>Subtotaal:</p>
-          <p>€{{totalProductPrice}}</p>
+          <p>€{{totalProductPrice | number : '1.2-2' }}</p>
         </div>
         <div>
           <p>Verzendkosten:</p>
-          <p>€{{0}}</p>
+          <p>€{{shippingCost}}</p>
         </div>
         <div class="cart__price--total">
           <p>Totaal:</p>
-          <p>€{{totalProductPrice}}</p>
+          <p>€{{ totalProductPrice + shippingCost | number : '1.2-2' }}</p>
         </div>
       </div>
       <div class="cart__checkout--button--container">
