@@ -60,10 +60,10 @@
   margin: 0.5rem;
 }
 
-  .cart__price--container div {
-    display: flex;
-    justify-content: space-between;
-  }
+.cart__price--container div {
+  display: flex;
+  justify-content: space-between;
+}
 
 .cart__price--total {
   padding-top: 0.5rem;
@@ -81,9 +81,9 @@
   width: 10rem;
 }
 
-  .cart__checkout--button p {
-    font-size: 1.25rem;
-  }
+.cart__checkout--button p {
+  font-size: 1.25rem;
+}
 
 .cart__checkout--button--container button {
   all: unset;
@@ -99,10 +99,10 @@
   align-items: center;
 }
 
-  .cart__checkout--button--container button:hover {
-    cursor: pointer;
-    border: 3px solid var(--green--interactive);
-  }
+.cart__checkout--button--container button:hover {
+  cursor: pointer;
+  border: 3px solid var(--green--interactive);
+}
 
 .cart__checkout--button--container a {
   text-decoration: none;
