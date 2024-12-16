@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using MisterPasta.Server.DTO;
 using MisterPasta.Server.Services;
+using Stripe;
 using MyDbContext = MisterPasta.Server.MyDbContext;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +12,10 @@ builder.Configuration
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
     .AddEnvironmentVariables();
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 // Add services to the container.
-builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<MisterPasta.Server.Services.ProductService>();
 builder.Services.AddScoped<FilterService>();
 
  //Add DbContext with MariaDB connection
@@ -21,6 +25,8 @@ builder.Services.AddDbContext<MyDbContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
     )
 );
+
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
