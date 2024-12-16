@@ -36,14 +36,6 @@ form {
   grid-gap: 10px;
 }
 
-/*.form__cta {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-  border-radius: 5px;
-}*/
-
 .form__cta button {
   all: unset;
   width: 100%;
