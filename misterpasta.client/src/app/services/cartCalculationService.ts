@@ -18,7 +18,7 @@ export class CartCalculationService {
     for (const cartItem of cartItems) {
       try {
         const response = await firstValueFrom(
-          this.httpClient.get<Meal>(`https://jg4c0gww4kwk8c4ocg8ckss0.145.44.234.98.sslip.io/api/Products/${cartItem.productId}`)
+          this.httpClient.get<Meal>(`https://localhost:7191/api/Products/${cartItem.productId}`)
         );
         totalProductPrice += response.price * cartItem.quantity;
       } catch (error) {
