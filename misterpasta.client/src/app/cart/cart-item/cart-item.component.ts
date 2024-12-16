@@ -18,12 +18,14 @@ export class CartItemComponent {
   addAmount() {
     if (this.currentAmount < 99) {
       this.currentAmount++;
+      this.cartService.addToCart(this.meal, 1);
     }
   }
 
   subtractAmount() {
     if (this.currentAmount > 1) {
       this.currentAmount--;
+      this.cartService.addToCart(this.meal, -1);
     }
   }
 
