@@ -26,6 +26,7 @@ import { BestSellerItemComponent } from './home/best-sellers/best-seller-item/be
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { TeasersComponent } from './home/teasers/teasers.component';
 import { TeasersItemComponent } from './home/teasers/teasers-item/teasers-item.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { TeasersItemComponent } from './home/teasers/teasers-item/teasers-item.c
     BestSellerItemComponent,
     CartItemComponent,
     TeasersComponent,
-    TeasersItemComponent
+    TeasersItemComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,
