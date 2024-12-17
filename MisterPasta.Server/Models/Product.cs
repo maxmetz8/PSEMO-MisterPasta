@@ -13,6 +13,8 @@ namespace MisterPasta.Server.Models
         public required bool IsVegan { get; set; }
         public required bool IsHalal { get; set; }
         public required int Quantity { get; set; }
+        public  ICollection<Image> Images { get; set; } = new List<Image>();
+
     }
 
 }

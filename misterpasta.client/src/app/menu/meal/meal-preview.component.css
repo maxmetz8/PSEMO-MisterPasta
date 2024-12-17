@@ -15,8 +15,21 @@
 }
 
 .meal__image {
-  background-color: gray;
+  width: 100%; /* Vul de gehele breedte van de container */
+  height: 100%; /* Vul de gehele hoogte van de container */
+  border-radius: 5px;
+  overflow: hidden; /* Verberg alles buiten de container */
+  display: flex; /* Zorg dat het kind-element centraal staat */
+  justify-content: center;
+  align-items: center;
 }
+
+  .meal__image img {
+    width: 100%; /* Pas de breedte aan de container aan */
+    height: 100%; /* Pas de hoogte aan de container aan */
+    object-fit: cover; /* Zorg dat de afbeelding past en bijsnijdt */
+    border-radius: 5px; /* Ronde hoeken */
+  }
 
 .meal__information {
   display: flex;
