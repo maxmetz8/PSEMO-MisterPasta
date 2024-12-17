@@ -52,18 +52,14 @@
         </div>
         <div class="form__box">
           <h3>Te betalen:</h3>
-          <p>€{{totalProductPrice}}</p>
+          <p>€{{totalProductPrice + 1.99 | number : '1.2-2' }}</p>
         </div>
-        <div class="form__box">
-          <label for="payment-method-select"><h3>Betaalmethode:</h3></label>
-          <select name="payment-method" id="payment-method-select" required #paymentMethod="ngModel" ngModel>
-            <option value="">Kies een methode</option>
-            <option value="ideal">Ideal</option>
-          </select>
-          <span *ngIf="paymentMethod.touched && paymentMethod.invalid" style="color: red;">Dit veld is verplicht!</span>
-        </div>
-        <div class="form__box cta">
-          <button [disabled]="paymentForm.invalid">Betalen</button>
+        <div class="form__box stripe">
+          <button [disabled]="paymentForm.invalid">
+            <a *ngIf="!paymentForm.invalid" href="https://buy.stripe.com/28o7t60KLdzo5XidQT?prefilled_email=misterpasta%40gmail.com">
+              Betaal nu
+            </a>
+          </button>
         </div>
       </form>
     </div>

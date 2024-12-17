@@ -5,23 +5,24 @@
   border-radius: 5px;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  gap: 1rem; 
+  gap: 1rem;
+  min-width: 600px;
 }
 
-  .cart--item--container a {
-    display: block; 
-    width: 100px; 
-    height: 100px;
-    overflow: hidden; 
-    border-radius: 5px; 
-  }
+.cart--item--container a {
+  display: block; 
+  width: 100px; 
+  height: 100px;
+  overflow: hidden; 
+  border-radius: 5px; 
+}
 
-  .cart--item--container img {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-    display: block; 
-  }
+.cart--item--container img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+  display: block; 
+}
 
 .cart--item--product--title {
   flex: 1; 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Meal } from '../../../../models/Meal';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../../services/cartService';
 
 @Component({
   selector: 'app-product-page',
@@ -12,7 +13,7 @@ export class ProductPageComponent {
   meal: Meal;
   id: number = 0;
   amount: number = 0;
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -46,5 +47,16 @@ export class ProductPageComponent {
     if (this.amount > 0) {
       this.amount--;
     }
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.meal, this.meal.quantity);
+    alert(
+      'Succesvol ' +
+      this.meal.quantity +
+      ' keer ' +
+      this.meal.name +
+      ' toegevoegd!'
+    );
   }
 }

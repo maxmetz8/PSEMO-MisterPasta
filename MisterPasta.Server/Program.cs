@@ -11,7 +11,7 @@ builder.Configuration
     .AddEnvironmentVariables();
 
 // Add services to the container.
-builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<MisterPasta.Server.Services.ProductService>();
 builder.Services.AddScoped<FilterService>();
 
  //Add DbContext with MariaDB connection
