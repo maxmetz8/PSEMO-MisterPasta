@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MisterPasta.Server.DTO;
 using MisterPasta.Server.Models;
 using MisterPasta.Server.Services;
@@ -26,12 +27,13 @@ namespace MisterPasta.Server.Controllers
             return Ok(products);
         }
 
-        // GET: api/Products/id
+        // GET: api/Products/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             return await _productService.GetProductById(id);
         }
+
 
         [HttpPost("Filter")]
         public async Task<IEnumerable<Product>> Search(ProductRequestDTO? productRequest)
@@ -46,5 +48,18 @@ namespace MisterPasta.Server.Controllers
             }
         }
 
+        // GET: api/Products/images/id
+        [HttpGet("{id}/images")]
+        public async Task<IActionResult> GetProductImagesByProductId(int id)
+        {
+            var images = await _productService.GetImages(id);
+
+            if (!images.Any())
+            {
+                return Ok(new { Message = "No images available for this product." });
+            }
+
+            return Ok(images.Select(img => img.ImageUrl).ToList());
+        }
     }
 }

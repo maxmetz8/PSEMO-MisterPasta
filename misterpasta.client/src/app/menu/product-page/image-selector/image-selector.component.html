@@ -1,0 +1,12 @@
+<div class="selected-image">
+  <img *ngIf="savedPictureIdx > -1" [src]="pictures[savedPictureIdx]" alt="Selected Image" />
+</div>
+
+<div class="image-container">
+  <div *ngFor="let picture of pictures; let i = index" class="image-wrapper">
+    <img [src]="picture"
+         [alt]="'Image ' + i"
+         [class.selected]="i === savedPictureIdx"
+         (click)="updatePicture(i)" />
+  </div>
+</div>
