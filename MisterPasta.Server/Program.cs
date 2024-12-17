@@ -12,8 +12,6 @@ builder.Configuration
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
     .AddEnvironmentVariables();
 
-builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
-
 // Add services to the container.
 builder.Services.AddScoped<MisterPasta.Server.Services.ProductService>();
 builder.Services.AddScoped<FilterService>();
