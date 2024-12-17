@@ -26,8 +26,8 @@ import { BestSellerItemComponent } from './home/best-sellers/best-seller-item/be
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { TeasersComponent } from './home/teasers/teasers.component';
 import { TeasersItemComponent } from './home/teasers/teasers-item/teasers-item.component';
+import { ImageSelectorComponent } from './menu/product-page/image-selector/image-selector.component';
 import { PaymentComponent } from './payment/payment.component';
-
 
 @NgModule({
   declarations: [
@@ -52,8 +52,9 @@ import { PaymentComponent } from './payment/payment.component';
     BestSellerItemComponent,
     CartItemComponent,
     TeasersComponent,
-    TeasersItemComponent,
-    PaymentComponent
+        PaymentComponent,
+        ImageSelectorComponent,
+        TeasersItemComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

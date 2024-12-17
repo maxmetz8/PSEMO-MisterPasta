@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Meal } from '../../../../models/Meal';
 import { HttpClient } from '@angular/common/http';
@@ -33,7 +33,7 @@ export class ProductPageComponent {
   }
 
   fetchProduct(id: number) {
-    return this.httpClient.get<Meal>(`https://localhost:7191/api/Products/${this.id}`);
+      return this.httpClient.get<Meal>(`https://jg4c0gww4kwk8c4ocg8ckss0.145.44.234.98.sslip.io/api/Products/${this.id}`);
   }
 
   addAmount() {
