@@ -7,6 +7,7 @@ import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductPageComponent } from './menu/product-page/product-page.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'menu/:id', component: ProductPageComponent },
+  { path: 'payment', component: PaymentComponent },
   { path: '**', component: HomeComponent}
 ];
 
