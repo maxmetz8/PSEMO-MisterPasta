@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MisterPasta.Server.DTO;
 using MisterPasta.Server.Services;
-using Stripe;
 using MyDbContext = MisterPasta.Server.MyDbContext;
 
 var builder = WebApplication.CreateBuilder(args);
