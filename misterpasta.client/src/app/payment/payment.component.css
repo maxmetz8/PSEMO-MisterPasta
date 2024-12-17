@@ -128,3 +128,13 @@ form {
 .cta {
   background-color: transparent;
 }
+
+.stripe {
+  display: grid;
+  place-items: center;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
