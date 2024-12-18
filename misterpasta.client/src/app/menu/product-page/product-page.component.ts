@@ -50,12 +50,12 @@ export class ProductPageComponent {
   }
 
   addToCart() {
-    this.cartService.addToCart(this.meal, this.meal.quantity);
+    this.cartService.addToCart(this.meal, this.amount);
     alert(
       'Succesvol ' +
-      this.meal.quantity +
+      this.amount +
       ' keer ' +
-      this.meal.name +
+      this.amount +
       ' toegevoegd!'
     );
   }
