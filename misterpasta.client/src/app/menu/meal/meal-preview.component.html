@@ -1,7 +1,7 @@
 <div class="meal">
   <div class="meal__image">
     <a [routerLink]="['/menu', meal.productId]">
-      <img src="" alt="placeholder" />
+      <img [src]="imageUrl" alt="{{meal.name}}" />
     </a>
   </div>
   <div class="meal__information">

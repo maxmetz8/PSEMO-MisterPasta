@@ -1,0 +1,68 @@
+<app-header></app-header>
+<div class="payment">
+  <div class="payment__form-container">
+    <div class="payment__container">
+      <form #paymentForm="ngForm" (ngSubmit)="createPayment(paymentForm.value)">
+        <div class="form__box">
+          <div class="form__row">
+            <h3>NAW-gegevens</h3>
+            <label>Voornaam:</label>
+            <input type="text" placeholder="Mister" required name="firstName" #firstName="ngModel" ngModel />
+            <span *ngIf="firstName.touched && firstName.invalid" style="color: red;">Dit veld is verplicht!</span>
+          </div>
+          <div class="form__row">
+            <label>Achternaam:</label>
+            <input type="text" placeholder="Pasta" required name="lastName" #lastName="ngModel" ngModel />
+            <span *ngIf="lastName.touched && lastName.invalid" style="color: red;">Dit veld is verplicht!</span>
+          </div>
+          <div class="form__row">
+            <label>Straat + huisnummer:</label>
+            <input type="text" placeholder="Pastastraat 1" required name="address" #address="ngModel" ngModel />
+            <span *ngIf="address.touched && address.invalid" style="color: red;">Dit veld is verplicht!</span>
+          </div>
+          <div class="form__row">
+            <label>Postcode:</label>
+            <input type="text" placeholder="1111 AA" required name="postalcode" #postalcode="ngModel" ngModel />
+            <span *ngIf="postalcode.touched && postalcode.invalid" style="color: red;">Dit veld is verplicht!</span>
+            <div *ngIf="!isValidPostalCode(paymentForm.value.postalcode) && paymentForm.value.postalcode">
+              <span style="color: red;">Voer een geldig Nederlands postcode in (bijv. 1111 AA).</span>
+            </div>
+          </div>
+          <div class="form__row">
+            <label>Telefoonnummer:</label>
+            <input type="tel" placeholder="0612345678" required name="phoneNumber" #phoneNumber="ngModel" ngModel />
+            <span *ngIf="phoneNumber.touched && phoneNumber.invalid" style="color: red;">Dit veld is verplicht!</span>
+            <div *ngIf="!isValidDutchPhoneNumber(paymentForm.value.phoneNumber) && paymentForm.value.phoneNumber">
+              <span style="color: red;">Voer een geldig Nederlands telefoonnummer in (bijv. 0612345678).</span>
+            </div>
+          </div>
+          <div class="form__row">
+            <label>E-mail:</label>
+            <input type="text" placeholder="misterpasta@gmail.com" required name="email" #email="ngModel" ngModel />
+            <span *ngIf="email.touched && email.invalid" style="color: red;">Dit veld is verplicht!</span>
+            <div *ngIf="!isValidEmail(paymentForm.value.email) && paymentForm.value.email">
+              <span style="color: red;">Voer een geldig email in</span>
+            </div>
+          </div>
+          <div class="form__row">
+            <label>Aanvullende informatie:</label>
+            <input type="text" placeholder="Ik ben op vakantie" name="extraInfo" #extraInfo="ngModel" ngModel />
+            <span *ngIf="paymentForm.invalid" style="color: red;">Vul alle verplichte velden in!</span>
+          </div>
+        </div>
+        <div class="form__box">
+          <h3>Te betalen:</h3>
+          <p>€{{totalProductPrice + 1.99 | number : '1.2-2' }}</p>
+        </div>
+        <div class="form__box stripe">
+          <button [disabled]="paymentForm.invalid">
+            <a *ngIf="!paymentForm.invalid" href="https://buy.stripe.com/28o7t60KLdzo5XidQT?prefilled_email=misterpasta%40gmail.com">
+              Betaal nu
+            </a>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

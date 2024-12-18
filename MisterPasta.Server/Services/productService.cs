@@ -19,6 +19,15 @@ namespace MisterPasta.Server.Services
             return products;
         }
 
+        public async Task<IEnumerable<Image>> GetImages(int id)
+        {
+            return await _context.Images
+                .Where(i => i.ProductId == id) 
+                .ToListAsync(); 
+        }
+
+
+
         public async Task<Product> GetProductById(int id)
         {
             var product = await _context.Products.FindAsync(id);
