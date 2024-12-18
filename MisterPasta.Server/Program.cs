@@ -14,7 +14,7 @@ builder.Configuration
 builder.Services.AddScoped<MisterPasta.Server.Services.ProductService>();
 builder.Services.AddScoped<FilterService>();
 
- //Add DbContext with MariaDB connection
+//Add DbContext with MariaDB connection
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("DefaultConnection"),
@@ -38,13 +38,10 @@ using (var scope = app.Services.CreateScope())
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin());
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseCors(options => options.AllowAnyHeader().AllowAnyOrigin());
+
 
 app.UseHttpsRedirection();
 

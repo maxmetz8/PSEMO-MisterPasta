@@ -21,7 +21,7 @@ services:
       - '5186:5186'
     environment:
       - ASPNETCORE_URLS=http://+:5186
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.SpaProxy
     depends_on:
       - db
