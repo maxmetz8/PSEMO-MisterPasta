@@ -15,20 +15,20 @@
 }
 
 .meal__image {
-  width: 100%; /* Vul de gehele breedte van de container */
-  height: 100%; /* Vul de gehele hoogte van de container */
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
-  overflow: hidden; /* Verberg alles buiten de container */
-  display: flex; /* Zorg dat het kind-element centraal staat */
+  overflow: hidden;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
   .meal__image img {
-    width: 100%; /* Pas de breedte aan de container aan */
-    height: 100%; /* Pas de hoogte aan de container aan */
-    object-fit: cover; /* Zorg dat de afbeelding past en bijsnijdt */
-    border-radius: 5px; /* Ronde hoeken */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
   }
 
 .meal__information {
