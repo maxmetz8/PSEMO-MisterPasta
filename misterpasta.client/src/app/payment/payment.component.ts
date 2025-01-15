@@ -9,7 +9,6 @@ import { CartCalculationService } from '../services/cartCalculationService';
 })
 export class PaymentComponent implements OnInit {
   totalProductPrice: number;
-
   constructor(private cartCalculationService: CartCalculationService) {}
 
   ngOnInit(): void {
@@ -25,7 +24,7 @@ export class PaymentComponent implements OnInit {
   }
 
   isValidDutchPhoneNumber(phoneNumber: string): boolean {
-    const dutchPhoneRegex = /^0[1-9][0-9]{1}[0-9]{8}$/;
+    const dutchPhoneRegex = /^06[0-9]{8}$/;
     return dutchPhoneRegex.test(phoneNumber);
   }
 

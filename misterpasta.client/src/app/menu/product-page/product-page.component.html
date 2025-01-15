@@ -2,42 +2,45 @@
 <div class="product">
   <div class="product__container container">
     <div class="product__title">
-      <h1><b>{{meal.name}}</b></h1>
-      <h2>{{meal.name}}</h2>
+      <h1>{{meal.name}}</h1>
     </div>
-    <div class="product__info">
-      <div class="product__images">
+    <div class="product__title__description">
+      <p>{{meal.description}}</p>
+    </div>
 
-      </div>
-      <div class="product__cta-container">
-        <h2>€{{meal.price}} p/s</h2>
-        <div class="meal__counter">
-          <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
-          <p data-cy="meal-amount">{{amount}}</p>
-          <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
+      <div class="product__info">
+        <div class="product__images">
+          <app-image-selector></app-image-selector>
         </div>
-        <div class="meal__add-to-cart">
-          <button><p>In winkelwagen</p></button>
+        <div class="product__cta-container">
+          <h2>€{{meal.price}} p/s</h2>
+          <div class="meal__counter">
+            <button class="counter__cta red" data-cy="meal-button-subtract" (click)="subtractAmount()">-</button>
+            <p data-cy="meal-amount">{{amount}}</p>
+            <button data-cy="meal-button-add" class="counter__cta green" (click)="addAmount()">+</button>
+          </div>
+          <div class="meal__add-to-cart">
+            <button (click)="addToCart()"><p>In winkelwagen</p></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product__other-info container">
+      <div class="product__description">
+        <h2>Omschrijving</h2>
+        <div class="product__description-container">
+
+        </div>
+      </div>
+      <div class="product__recommendations">
+        <h2>Aanbevolen</h2>
+        <div class="product__recommendations-container">
+
+        </div>
+        <div>
+
         </div>
       </div>
     </div>
   </div>
-  <div class="product__other-info container">
-    <div class="product__description">
-      <h2>Omschrijving</h2>
-      <div class="product__description-container">
-
-      </div>
-    </div>
-    <div class="product__recommendations">
-      <h2>Aanbevolen</h2>
-      <div class="product__recommendations-container">
-
-      </div>
-      <div>
-
-      </div>
-    </div>
-  </div>
-</div>
 <app-footer></app-footer>

@@ -16,7 +16,7 @@ export class MenuComponent implements OnInit {
   }
 
   fetchProducts() {
-    this.httpClient.get<Meal[]>('https://localhost:7191/api/Products').subscribe(
+    this.httpClient.get<Meal[]>('https://jg4c0gww4kwk8c4ocg8ckss0.145.44.234.98.sslip.io/api/Products').subscribe(
       (data) => {
         this.meals = data;
       },

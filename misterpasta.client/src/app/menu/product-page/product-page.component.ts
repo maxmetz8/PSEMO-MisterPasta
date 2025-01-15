@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Meal } from '../../../../models/Meal';
 import { HttpClient } from '@angular/common/http';
+import { CartService } from '../../services/cartService';
 
 @Component({
   selector: 'app-product-page',
@@ -12,7 +13,7 @@ export class ProductPageComponent {
   meal: Meal;
   id: number = 0;
   amount: number = 0;
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
+  constructor(private route: ActivatedRoute, private httpClient: HttpClient, private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -33,7 +34,7 @@ export class ProductPageComponent {
   }
 
   fetchProduct(id: number) {
-    return this.httpClient.get<Meal>(`https://localhost:7191/api/Products/${this.id}`);
+      return this.httpClient.get<Meal>(`https://jg4c0gww4kwk8c4ocg8ckss0.145.44.234.98.sslip.io/api/Products/${this.id}`);
   }
 
   addAmount() {
@@ -46,5 +47,16 @@ export class ProductPageComponent {
     if (this.amount > 0) {
       this.amount--;
     }
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.meal, this.amount);
+    alert(
+      'Succesvol ' +
+      this.amount +
+      ' keer ' +
+      this.amount +
+      ' toegevoegd!'
+    );
   }
 }
