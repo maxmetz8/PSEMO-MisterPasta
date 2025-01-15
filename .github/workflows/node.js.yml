@@ -8,16 +8,20 @@ on:
 
 jobs:
   cypress:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x] # Gebruik alleen ondersteunde Node.js-versies voor Cypress
+        node-version: [18.x, 20.x] # ondersteunde Node.js versies voor Cypress
 
     steps:
     # Check out de repository
     - uses: actions/checkout@v4
+
+    # Navigeer naar de juiste subdirectory
+    - name: Change to misterpasta.client directory
+      working-directory: ./misterpasta.client
+      run: echo "Navigated to misterpasta.client directory"
 
     # Gebruik de juiste versie van Node.js
     - name: Use Node.js ${{ matrix.node-version }}
@@ -28,17 +32,22 @@ jobs:
 
     # Installeer dependencies
     - name: Install dependencies
+      working-directory: ./misterpasta.client
       run: npm ci
 
-    # Build je project indien nodig
+    # Build je project (indien nodig)
     - name: Build the project
+      working-directory: ./misterpasta.client
       run: npm run build --if-present
 
     # Installeer Cypress
     - name: Install Cypress
+      working-directory: ./misterpasta.client
       run: npx cypress install
 
     # Voer Cypress tests uit
     - name: Run Cypress Tests
+      working-directory: ./misterpasta.client
       run: npx cypress run
- 
+      env:
+        CYPRESS_BASE_URL: 'http://localhost:4200' # Pas aan als nodig
