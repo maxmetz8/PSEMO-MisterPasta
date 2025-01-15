@@ -8,6 +8,8 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\misterpasta.client\browser\</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="cypress\e2e\formChecker\" />
+    <Folder Include="cypress\e2e\cartTest\" />
     <Folder Include="src\app\home\heroBanner\" />
   </ItemGroup>
 </Project>

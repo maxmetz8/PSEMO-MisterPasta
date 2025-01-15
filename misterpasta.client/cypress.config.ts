@@ -7,6 +7,8 @@ export default defineConfig({
       home_url: "https://127.0.0.1:4200/",
       order_url: "https://127.0.0.1:4200/order",
       menu_url: "https://127.0.0.1:4200/menu",
+      payment_url: "https://127.0.0.1:4200/payment",
+      cart_url: "https://127.0.0.1:4200/cart"
     },
   },
 
