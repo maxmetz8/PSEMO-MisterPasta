@@ -27,17 +27,17 @@ jobs:
 
     # Navigeer naar de juiste directory
     - name: Change to misterpasta.client directory
-      working-directory: ./misterpasta.client
+      working-directory: ./PSEMO-MisterPasta/misterpasta.client
       run: echo "Navigated to misterpasta.client directory"
 
     # Installeer Cypress
     - name: Install Cypress
-      working-directory: ./misterpasta.client
+      working-directory: ./PSEMO-MisterPasta/misterpasta.client
       run: npx cypress install
 
     # Voer Cypress tests uit op de gehoste applicatie
     - name: Run Cypress Tests
-      working-directory: ./misterpasta.client
+      working-directory: ./PSEMO-MisterPasta/misterpasta.client
       run: npx cypress run
       env:
         CYPRESS_BASE_URL: 'https://145-44-234-98.sslip.io/'
